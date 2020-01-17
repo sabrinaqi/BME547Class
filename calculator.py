@@ -13,21 +13,25 @@ def divide(x,y):
     z = x/y
     return z
 
-x = input("Enter a letter: ")
+x = input("Enter a letter, where a = add, s = subtract, m = multiply, and d = divide: ")
+y = input("Enter a number: ")
+y_num = float(y)
+z = input("Enter another number: ")
+z_num = float(z)
 print("You entered {}".format(x))
 
 if x == "a":
-    z = add(47,7)
-    print("{}+{} = {}".format(47,7,z))
-elif x =="b":
-    z = subtract(47,7)
-    print("{}-{} = {}".format(47,7,z))
-elif x == "c":
-    z = multiply(47,7)
-    print("{}*{} = {}".format(47,7,z))
+    z = add(y_num,z_num)
+    print("{}+{} = {}".format(y_num,z_num,z))
+elif x =="s":
+    z = subtract(y_num,z_num)
+    print("{}-{} = {}".format(y_num,z_num,z))
+elif x == "m":
+    z = multiply(y_num,z_num)
+    print("{}*{} = {}".format(y_num,z_num,z))
 elif x == "d":
-    z = divide(47,7)
-    print("{}/{} = {}".format(47,7,z))
+    z = divide(y_num,z_num)
+    print("{}/{} = {}".format(y_num,z_num,z))
 else:
     print("The {} command is not recognized.".format(x))
 
